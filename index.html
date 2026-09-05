@@ -3,261 +3,183 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Қазақ даласының шекарасын бекітудегі хандар мен қайраткерлердің рөлі</title>
+<title>Қазақстан территориясы</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500;700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#241f18;
-    --sand:#efe6d2;
-    --sand-deep:#e4d7b8;
-    --paper:#f7f1e2;
-    --gold:#a97b28;
-    --gold-dim:#c9a35c;
-    --steppe:#24506b;
-    --steppe-deep:#1a3a4f;
-    --brick:#8a3a30;
-    --line:#cdbd94;
-    --muted:#645a48;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--sand);
-    color:var(--ink);
-    font-family:'Lora',serif;
-    font-size:17px;
-    line-height:1.65;
-  }
-  h1,h2,h3,.disp{
-    font-family:'Unbounded',sans-serif;
-    color:var(--ink);
-    margin:0;
-    line-height:1.15;
-  }
-  a{color:var(--steppe-deep);}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+:root{
+  --ink:#241f18;--sand:#efe6d2;--sand-deep:#e4d7b8;--paper:#f7f1e2;
+  --gold:#a97b28;--gold-dim:#c9a35c;--steppe:#24506b;--steppe-deep:#1a3a4f;
+  --brick:#8a3a30;--line:#cdbd94;--muted:#645a48;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--sand);color:var(--ink);font-family:'Lora',serif;font-size:17px;line-height:1.65}
+h1,h2,h3,.disp{font-family:'Unbounded',sans-serif;margin:0;line-height:1.15}
+a{color:var(--steppe-deep)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
 
-  /* HERO */
-  .hero{
-    position:relative;
-    padding:88px 0 64px;
-    background:
-      radial-gradient(ellipse at 15% 20%, rgba(169,123,40,0.16), transparent 55%),
-      radial-gradient(ellipse at 85% 80%, rgba(36,80,107,0.14), transparent 55%),
-      var(--sand);
-    border-bottom:1px solid var(--line);
-    overflow:hidden;
-  }
-  .hero .eyebrow{
-    font-size:13px;
-    color:var(--muted);
-    margin-bottom:18px;
-    max-width:560px;
-  }
-  .hero h1{
-    font-size:clamp(30px,4.4vw,50px);
-    font-weight:700;
-    max-width:820px;
-    letter-spacing:-0.01em;
-  }
-  .hero h1 em{
-    font-style:normal;
-    color:var(--gold);
-  }
-  .hero p.lede{
-    max-width:640px;
-    margin-top:22px;
-    font-size:19px;
-    color:#3a3226;
-  }
-  .hero-motif{
-    position:absolute;
-    right:-60px;
-    top:-40px;
-    width:420px;
-    height:420px;
-    opacity:0.5;
-  }
+.hero{position:relative;padding:88px 0 64px;background:
+radial-gradient(ellipse at 15% 20%,rgba(169,123,40,.16),transparent 55%),
+radial-gradient(ellipse at 85% 80%,rgba(36,80,107,.14),transparent 55%),var(--sand);
+border-bottom:1px solid var(--line);overflow:hidden}
+.hero .eyebrow{font-size:13px;color:var(--muted);margin-bottom:18px}
+.hero h1{font-size:clamp(30px,4.4vw,50px);font-weight:700;max-width:900px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lede{max-width:760px;margin-top:22px;font-size:19px;color:#3a3226}
 
-  /* TIMELINE NAV */
-  nav.timeline{
-    position:sticky;
+nav.timeline{position:sticky;top:0;z-index:40;background:rgba(239,230,210,.96);
+backdrop-filter:blur(6px);border-bottom:1px solid var(--line);overflow-x:auto}
+nav.timeline .row{display:flex;gap:2px;padding:0 16px;min-width:max-content}
+nav.timeline a{display:flex;flex-direction:column;gap:2px;padding:12px 16px;text-decoration:none;
+color:var(--muted);border-bottom:3px solid transparent;white-space:nowrap;font-size:13px}
+nav.timeline a .yr{font-family:'Unbounded',sans-serif;font-size:12px;color:var(--gold)}
+nav.timeline a:hover{color:var(--ink);border-color:var(--gold-dim)}
+
+.intro-block{padding:56px 0}
+.intro-block h2{font-size:24px;font-weight:500;margin-bottom:16px}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:28px}
+.stat-card{border-top:2px solid var(--gold);padding-top:14px}
+.stat-card .num{font-family:'Unbounded',sans-serif;font-size:30px;color:var(--gold)}
+.stat-card p{font-size:14.5px;color:var(--muted);margin-top:6px}
+
+section.era{padding:64px 0;border-bottom:1px solid var(--line)}
+section.era:nth-of-type(even){background:var(--paper)}
+.era-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:start}
+.era-tag{display:inline-block;font-family:'Unbounded',sans-serif;font-size:12px;color:var(--gold);
+border:1px solid var(--gold-dim);padding:4px 10px;border-radius:2px;margin-bottom:14px}
+.era h2{font-size:clamp(22px,2.6vw,30px);font-weight:500;margin-bottom:6px}
+.era .years{font-family:'Unbounded',sans-serif;color:var(--muted);font-size:14px;margin-bottom:22px}
+.era p{margin:0 0 14px;max-width:68ch}
+.figures{margin:22px 0 0;padding:0;list-style:none}
+.figures li{padding:10px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:150px 1fr;gap:14px}
+.figures li:last-child{border-bottom:1px solid var(--line)}
+.figures .name{font-weight:600}.figures .role{color:var(--muted);font-size:15.5px}
+.actions{margin:20px 0 0;padding-left:18px}.actions li{margin-bottom:8px}.actions li::marker{color:var(--gold)}
+
+.media-card{background:var(--sand-deep);border:1px solid var(--line);padding:14px;position:sticky;top:64px}
+.media-card img{width:100%;height:330px;object-fit:cover;display:block;background:#ddd}
+.media-card.map img{object-fit:contain;background:#f2e9d8}
+.media-cap{font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.5}
+.media-source{font-size:11.5px;color:var(--muted);margin-top:8px}
+.media-source a{color:var(--muted)}
+
+.how{margin:24px 0 0;padding:18px 20px;background:rgba(169,123,40,.09);
+border-left:3px solid var(--gold)}
+.how strong{font-family:'Unbounded',sans-serif;font-size:12px;color:var(--gold);display:block;margin-bottom:8px}
+.how p{margin:0;font-size:15.5px}
+
+.conclusion{padding:70px 0;background:var(--paper);border-bottom:1px solid var(--line)}
+.conclusion h2{font-size:30px;font-weight:500;margin-bottom:18px}
+.conclusion-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.summary-card{border:1px solid var(--line);padding:22px;background:var(--sand)}
+.summary-card h3{font-size:17px;color:var(--gold);margin-bottom:10px}
+.summary-card p{margin:0;font-size:15.5px}
+
+footer{padding:48px 0 64px;background:var(--steppe-deep);color:#e7e0cd}
+footer h3{color:#fff;font-size:18px;font-weight:500;margin-bottom:14px}
+footer p,footer li{color:#cfc7ae;font-size:14.5px}
+footer ol{padding-left:20px} footer li{margin-bottom:6px}
+footer .note{margin-top:26px;font-size:13px;color:#a49a7d;border-top:1px solid #35586d;padding-top:18px}
+.back-top{display:inline-block;margin-top:24px;font-size:13px;color:var(--gold);
+text-decoration:none;border-bottom:1px solid var(--gold-dim)}
+
+@media(max-width:860px){.era-grid,.conclusion-grid{grid-template-columns:1fr}.media-card{position:static}}
+@media(max-width:760px){.cols3{grid-template-columns:1fr}.wrap{padding:0 20px}.figures li{grid-template-columns:1fr;gap:2px}}
+
+  /* VERTICAL KAZAKH ORNAMENT */
+  .side-ornament{
+    position:fixed;
     top:0;
-    z-index:40;
-    background:rgba(239,230,210,0.96);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--line);
-    overflow-x:auto;
-    scrollbar-width:thin;
+    bottom:0;
+    width:64px;
+    z-index:25;
+    pointer-events:none;
+    background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Kazakh%20ornaments.jpg');
+    background-repeat:repeat-y;
+    background-size:58px auto;
+    background-position:center top;
+    opacity:.78;
+    filter:grayscale(1) contrast(1.35) brightness(.30);
+    mix-blend-mode:multiply;
   }
-  nav.timeline::-webkit-scrollbar{height:5px;}
-  nav.timeline::-webkit-scrollbar-thumb{background:var(--gold-dim);}
-  nav.timeline .row{
-    display:flex;
-    gap:2px;
-    padding:0 16px;
-    min-width:max-content;
+  .side-ornament.left{left:0;}
+  .side-ornament.right{right:0;transform:scaleX(-1);}
+  @media(max-width:1150px){
+    .side-ornament{width:42px;background-size:38px auto;opacity:.65;}
   }
-  nav.timeline a{
-    display:flex;
-    flex-direction:column;
-    gap:2px;
-    padding:12px 16px;
-    text-decoration:none;
-    color:var(--muted);
-    border-bottom:3px solid transparent;
-    white-space:nowrap;
-    font-size:13px;
-    transition:color .15s, border-color .15s;
+  @media(max-width:760px){
+    .side-ornament{display:none;}
   }
-  nav.timeline a .yr{font-family:'Unbounded',sans-serif;font-size:12px;color:var(--gold);}
-  nav.timeline a:hover{color:var(--ink); border-color:var(--gold-dim);}
 
-  /* ERA SECTIONS */
-  section.era{
-    padding:64px 0;
-    border-bottom:1px solid var(--line);
-  }
-  section.era:nth-of-type(even){background:var(--paper);}
-  .era-grid{
-    display:grid;
-    grid-template-columns:1.05fr 0.95fr;
-    gap:48px;
-    align-items:start;
-  }
-  @media (max-width:860px){
-    .era-grid{grid-template-columns:1fr;}
-  }
-  .era-tag{
-    display:inline-block;
-    font-family:'Unbounded',sans-serif;
-    font-size:12px;
-    color:var(--gold);
-    border:1px solid var(--gold-dim);
-    padding:4px 10px;
-    border-radius:2px;
-    margin-bottom:14px;
-  }
-  .era h2{
-    font-size:clamp(22px,2.6vw,30px);
-    font-weight:500;
-    margin-bottom:6px;
-  }
-  .era .years{
-    font-family:'Unbounded',sans-serif;
-    color:var(--muted);
-    font-size:14px;
-    margin-bottom:22px;
-  }
-  .era p{margin:0 0 14px;max-width:62ch;}
-  .figures{
-    margin:22px 0 0;
-    padding:0;
-    list-style:none;
-  }
-  .figures li{
-    padding:10px 0;
+  /* BEFORE / AFTER TERRITORY CARDS — ready for the specific maps you will provide */
+  .before-after{
+    margin-top:28px;
     border-top:1px solid var(--line);
+    padding-top:22px;
+  }
+  .before-after h3{
+    font-size:16px;
+    margin-bottom:16px;
+    color:var(--gold);
+  }
+  .ba-grid{
     display:grid;
-    grid-template-columns:150px 1fr;
-    gap:14px;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
   }
-  .figures li:last-child{border-bottom:1px solid var(--line);}
-  .figures .name{font-weight:600;color:var(--ink);}
-  .figures .role{color:var(--muted);font-size:15.5px;}
-  .actions{
-    margin:20px 0 0;
-    padding-left:18px;
-  }
-  .actions li{margin-bottom:8px;}
-  .actions li::marker{color:var(--gold);}
-
-  /* MAP CARD */
-  .map-card{
-    background:var(--sand-deep);
+  .ba-card{
+    background:var(--paper);
     border:1px solid var(--line);
-    padding:16px;
-    position:sticky;
-    top:64px;
+    padding:10px;
   }
-  .map-card svg{width:100%;height:auto;display:block;}
-  .map-cap{
-    font-size:12.5px;
-    color:var(--muted);
-    margin-top:10px;
-    line-height:1.5;
+  .ba-card img{
+    width:100%;
+    aspect-ratio:4/3;
+    object-fit:cover;
+    display:block;
+    background:#e4d7b8;
   }
-  .legend{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    margin-top:10px;
-    font-size:12px;
-    color:var(--muted);
-  }
-  .legend span{display:inline-flex;align-items:center;gap:6px;}
-  .swatch{width:12px;height:12px;display:inline-block;border-radius:1px;}
-
-  /* INTRO / CONCLUSION */
-  .intro-block{padding:56px 0;}
-  .intro-block h2{font-size:24px;font-weight:500;margin-bottom:16px;}
-  .cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:28px;}
-  @media (max-width:760px){.cols3{grid-template-columns:1fr;}}
-  .stat-card{
-    border-top:2px solid var(--gold);
-    padding-top:14px;
-  }
-  .stat-card .num{
+  .ba-label{
     font-family:'Unbounded',sans-serif;
-    font-size:30px;
+    font-size:11px;
     color:var(--gold);
+    margin:10px 0 4px;
   }
-  .stat-card p{font-size:14.5px;color:var(--muted);margin-top:6px;}
-
-  footer{
-    padding:48px 0 64px;
-    background:var(--steppe-deep);
-    color:#e7e0cd;
-  }
-  footer h3{color:#fff;font-size:18px;font-weight:500;margin-bottom:14px;}
-  footer p, footer li{color:#cfc7ae;font-size:14.5px;}
-  footer ol{padding-left:20px;}
-  footer li{margin-bottom:6px;}
-  footer .note{margin-top:26px;font-size:13px;color:#a49a7d;border-top:1px solid #35586d;padding-top:18px;}
-
-  .back-top{
-    display:inline-block;
-    margin-top:24px;
+  .ba-caption{
     font-size:13px;
-    color:var(--gold);
-    text-decoration:none;
-    border-bottom:1px solid var(--gold-dim);
+    color:var(--muted);
+    margin:0;
   }
+  @media(max-width:600px){
+    .ba-grid{grid-template-columns:1fr;}
+  }
+
 </style>
 </head>
 <body>
+<div class="side-ornament left" aria-hidden="true"></div>
+<div class="side-ornament right" aria-hidden="true"></div>
 
-<header class="hero">
+<header class="hero" id="top">
   <div class="wrap">
     <div class="eyebrow">ҒЫЛЫМИ ЖОБА · ТАРИХ</div>
-    <h1>Қазақ даласының шекарасын бекітудегі <em>қазақ хандары мен қайраткерлерінің</em> рөлі</h1>
-    <p class="lede">XV–XIX ғасырлар аралығында қазақ мемлекеттігінің қалыптасуынан бастап, тәуелсіздік үшін соңғы күреске дейінгі кезең — хандар, билер және батырлардың даланың шекарасын қорғау, кеңейту және сақтау жолындағы қызметі.</p>
+    <h1><em>Қазақстан территориясы</em></h1>
+    <p class="lede">XV–XIX ғасырлар аралығында қазақ жерінің аумағы бір ғана жолмен емес: көші-қон, саяси одақтар, әскери жорықтар, қалалар үшін күрес, дипломатия және қорғаныс арқылы қалыптасты. Төменде әр кезеңде аумақтың қалай кеңейгені немесе сақталғаны көрсетіледі.</p>
   </div>
 </header>
 
 <nav class="timeline">
   <div class="row">
-    <a href="#era1"><span class="yr">1465–1521</span>Хандықтың құрылуы</a>
-    <a href="#era2"><span class="yr">1538–1580</span>Хақназар хан</a>
+    <a href="#era1"><span class="yr">1465–1521</span>Құрылуы</a>
+    <a href="#era2"><span class="yr">1538–1580</span>Хақназар</a>
     <a href="#era3"><span class="yr">1598–1628</span>Есім хан</a>
     <a href="#era4"><span class="yr">1680–1715</span>Тәуке хан</a>
     <a href="#era5"><span class="yr">1723–1727</span>Ақтабан шұбырынды</a>
     <a href="#era6"><span class="yr">1726–1730</span>Бірігу және жеңіс</a>
-    <a href="#era7"><span class="yr">1740–1781</span>Абылай хан</a>
-    <a href="#era8"><span class="yr">1731–1822</span>Ресей протекторы</a>
-    <a href="#era9"><span class="yr">1837–1847</span>Кенесары көтерілісі</a>
+    <a href="#era7"><span class="yr">1740–1781</span>Абылай</a>
+    <a href="#era8"><span class="yr">1731–1822</span>Ресей ықпалы</a>
+    <a href="#era9"><span class="yr">1837–1847</span>Кенесары</a>
     <a href="#qorytyndy"><span class="yr">•</span>Қорытынды</a>
   </div>
 </nav>
@@ -266,161 +188,326 @@
 
 <div class="intro-block wrap">
   <span class="era-tag">КІРІСПЕ</span>
-  <h2>Неге шекара мәселесі қазақ тарихының өзегі болды?</h2>
-  <p>Қазақ хандығы құрылған сәттен бастап дала кеңістігі әрдайым бірнеше күштің — Ноғай Ордасы, Сібір хандығы, Жоңғар хандығы, Орта Азия хандықтары, кейінірек Ресей империясы мен Цин империясының — қызығушылық аймағында болды. Сондықтан хандардың, билер мен батырлардың негізгі міндеттерінің бірі — көшпелі мал шаруашылығына қажетті жайылымдық жерлерді, сауда жолдарын және стратегиялық өзен-көл бойындағы аумақтарды сақтап қалу еді.</p>
+  <h2>Жаңа жерлер қалай алынды немесе сақталды?</h2>
+  <p>Қазақ хандарының дәуірінде «шекара» қазіргі мемлекеттердегі сияқты дәл сызық бола бермеді. Негізгі өлшемдерге көш жолдары, жайылымдар, өзендер, қалалар, бекіністер және белгілі бір рулардың саяси бағыныстылығы кірді. Сондықтан аумақтың кеңеюі көбіне халықтардың саяси бірігуі, әскери жеңіс, қарсы жақтың әлсіреуі немесе дипломатиялық келісім арқылы жүрді.</p>
   <div class="cols3">
-    <div class="stat-card"><div class="num">~360</div><p>жыл — Керей мен Жәнібек ханнан Кенесары көтерілісінің басылуына дейінгі кезең</p></div>
-    <div class="stat-card"><div class="num">3</div><p>жүз (Ұлы, Орта, Кіші) — шекараны қорғауда бірігіп әрекет еткен негізгі саяси-аумақтық бірліктер</p></div>
-    <div class="stat-card"><div class="num">6+</div><p>көрші мемлекет пен хандық, олармен шекара мәселесі шешілген: Ресей, Жоңғария, Цин, Хиуа, Бұхара, Қоқан</p></div>
+    <div class="stat-card"><div class="num">1465</div><p>Қазақ хандығының қалыптасуының дәстүрлі басталу датасы ретінде қабылданатын кезең.</p></div>
+    <div class="stat-card"><div class="num">3</div><p>Ұлы, Орта және Кіші жүз — кейінгі қазақ қоғамының негізгі аумақтық-саяси бірлестіктері.</p></div>
+    <div class="stat-card"><div class="num">4</div><p>Аумақты өзгерткен негізгі тетік: көші-қон, соғыс, дипломатия және саяси бірігу.</p></div>
   </div>
 </div>
 
 <!-- ERA 1 -->
 <section class="era" id="era1">
-  <div class="wrap era-grid">
-    <div>
-      <span class="era-tag">І КЕЗЕҢ</span>
-      <h2>Қазақ хандығының құрылуы және алғашқы шекара</h2>
-      <div class="years">1465–1521 жж. · Керей хан, Жәнібек хан, Қасым хан</div>
-      <p>1465–1466 жылдары Әбілқайыр ханның қол астынан бөлініп шыққан Керей мен Жәнібек сұлтандар Моғолстан ханы Есен-бұғаның рұқсатымен Шу және Талас өзендерінің аңғарына көшіп, өз алдына хандық құрды. Бұл — қазақ мемлекеттігінің шекарасы алғаш рет саяси тұрғыда белгіленген сәт.</p>
-      <p>Қасым хан тұсында (1511–1521) хандықтың аумағы күрт кеңейді: билік Сырдария бойындағы қалаларға, Батыс Қазақстан даласына және Еділ бойына дейін жетті. Қасым хан «Қасым ханның қасқа жолы» атты заңдар жинағын қабылдап, аумақты басқарудың құқықтық негізін қалады, бұл шекара ішіндегі тәртіпті нығайтуға қызмет етті.</p>
-      <ul class="figures">
-        <li><span class="name">Керей хан</span><span class="role">Хандықтың негізін қалаушы, Жетісудағы алғашқы ордасы</span></li>
-        <li><span class="name">Жәнібек хан</span><span class="role">Хандықтың негізін қалаушы, Әбілқайырдан бөлек саяси орталық құрды</span></li>
-        <li><span class="name">Қасым хан</span><span class="role">Аумақты Сырдариядан Еділге дейін кеңейтті, «Қасқа жол» заңдары</span></li>
-      </ul>
-      <ol class="actions">
-        <li>Моғолстанмен одақтасып, тәуелсіз хандық құруға саяси негіз жасалды</li>
-        <li>Шу–Талас аңғары бекітілген негізгі орталыққа айналды</li>
-        <li>Сырдария қалалары (Сауран, Сығанақ) қосылып, оңтүстік шекара нығайды</li>
-      </ol>
-    </div>
-    <div class="map-card">
-      <svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg">
-        <rect width="800" height="560" fill="#f2e9d8"/>
-        <ellipse cx="90" cy="340" rx="50" ry="115" fill="#24506b" opacity="0.5"/>
-        <ellipse cx="235" cy="365" rx="32" ry="42" fill="#24506b" opacity="0.5"/>
-        <ellipse cx="560" cy="300" rx="95" ry="18" fill="#24506b" opacity="0.5" transform="rotate(-10 560 300)"/>
-        <path d="M150,110 C120,180 100,260 95,330" stroke="#24506b" stroke-width="3" fill="none" opacity="0.55"/>
-        <path d="M480,430 C400,410 300,390 235,365" stroke="#24506b" stroke-width="3" fill="none" opacity="0.55"/>
-        <path d="M660,60 C680,140 690,210 680,260" stroke="#24506b" stroke-width="3" fill="none" opacity="0.55"/>
-        <path d="M650,350 C610,335 585,315 565,300" stroke="#24506b" stroke-width="3" fill="none" opacity="0.55"/>
-        <polygon points="470,370 560,270 630,300 615,400 520,430" fill="#a97b28" opacity="0.45" stroke="#a97b28" stroke-width="2"/>
-        <text x="545" y="345" font-size="14" fill="#241f18" font-family="Unbounded, sans-serif" text-anchor="middle">Шу–Талас</text>
-        <text x="90" y="472" font-size="12" fill="#4a463c" text-anchor="middle">Каспий т.</text>
-        <text x="235" y="422" font-size="12" fill="#4a463c" text-anchor="middle">Арал т.</text>
-        <text x="560" y="336" font-size="12" fill="#4a463c" text-anchor="middle">Балқаш к.</text>
-        <text x="120" y="480" font-size="13" fill="#645a48" font-family="Unbounded, sans-serif">НОҒАЙ ОРДАСЫ</text>
-        <text x="620" y="60" font-size="13" fill="#645a48" font-family="Unbounded, sans-serif">МОҒОЛСТАН</text>
-        <text x="260" y="60" font-size="13" fill="#645a48" font-family="Unbounded, sans-serif">СІБІР ХАНДЫҒЫ</text>
-      </svg>
-      <div class="legend">
-        <span><span class="swatch" style="background:#a97b28"></span>Қазақ хандығының аумағы</span>
-        <span><span class="swatch" style="background:#24506b"></span>Су айдындары / өзендер</span>
-      </div>
-      <p class="map-cap">Схематикалық карта. 1465–1521 жж. хандықтың негізгі орталығы — Шу–Талас аңғары, кейін Сырдарияға дейін кеңейді. Нақты шекаралар шартты түрде көрсетілген.</p>
-    </div>
-  </div>
+<div class="wrap era-grid"><div>
+<span class="era-tag">І КЕЗЕҢ</span>
+<h2>Қазақ хандығының құрылуы және Қасым хан тұсындағы кеңею</h2>
+<div class="years">1465–1521 жж. · Керей хан, Жәнібек хан, Қасым хан</div>
+<p>Керей мен Жәнібек сұлтандар Әбілқайыр ханнан бөлініп, Моғолстан аумағындағы Шу–Талас өңіріне көшті. Бұл жаңа саяси бірлестіктің қалыптасуына жағдай жасады.</p>
+<p>Қасым хан кезінде хандықтың ықпалы едәуір кеңейді. Сырдария бойындағы қалалар мен далалық аймақтар үшін күрес жүргізіліп, батыс және солтүстік-батыс бағыттарда да ықпал күшейді.</p>
+<div class="how"><strong>ЖЕРДІ ҚАЛАЙ КЕҢЕЙТТІ?</strong><p>Негізгі жолы — жаңа саяси орталық құру, ру-тайпалардың хандыққа қосылуы және Сырдария бойындағы қалалар үшін әскери-саяси күрес. Қасым хан дәуірінде бұрынғы қарсыластары әлсіреген өңірлерде қазақ билігінің ықпалы күшейді.</p></div>
+<ul class="figures">
+<li><span class="name">Керей хан</span><span class="role">Жаңа хандықтың алғашқы ханы, Шу–Талас өңіріндегі саяси орталықты бекітті</span></li>
+<li><span class="name">Жәнібек хан</span><span class="role">Хандықтың саяси негізін қалыптастыруға қатысқан негізгі тұлға</span></li>
+<li><span class="name">Қасым хан</span><span class="role">Қасым хан кең-байтақ дала кеңiстiгiне өз үстемдiгiн орнатты.
+Хандықтың шегаралары Сырдарияның сол жағалауы мен Жетiсудың
+бiраз бөлiгiн қамтыды, солтүстiк-шығысында Ертiске дейiн жеттi.</span></li>
+</ul>
+</div>
+<div class="media-card map">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Map%20of%20the%20Kazakh%20Khanate%20in%20the%20early%201520s.png" alt="Қазақ хандығының Қасым хан тұсындағы аумағы">
+<div class="media-cap">Қасым хан тұсындағы хандықтың шамаменгі ең үлкен кеңеюін көрсететін карта. Шекаралар тарихи карталарда шартты түрде беріледі.</div>
+<div class="media-source">Сурет: Wikimedia Commons, CC BY-SA 4.0.</div>
+</div></div>
 </section>
 
 <!-- ERA 2 -->
 <section class="era" id="era2">
-  <div class="wrap era-grid">
-    <div>
-      <span class="era-tag">ІІ КЕЗЕҢ</span>
-      <h2>Хақназар хан: шекараны нығайту саясаты</h2>
-      <div class="years">1538–1580 жж. · Хақназар хан</div>
-      <p>Хақназар хан билігі — қазақ хандығының сыртқы саясатта неғұрлым дербес әрекет ете бастаған кезеңі. Ол Ноғай Ордасының ыдырауын пайдаланып, батыс өңірдегі ноғай тайпаларының бір бөлігін өз қол астына қосты, бұл Жайық (Орал) өзені бойындағы шекараны нығайтуға мүмкіндік берді.</p>
-      <p>Сонымен қатар Хақназар хан Сібір хандығымен және Орта Азия билеушілерімен (Бұхара әмірлігі) қатынастарды реттеп, оңтүстіктегі Сырдария қалалары үшін күреске белсене қатысты. Оның тұсында хандық үш жүздің де жерлерін біріктірген біртұтас саяси күшке айнала бастады.</p>
-      <ul class="figures">
-        <li><span class="name">Хақназар хан</span><span class="role">Ноғай және Сібір бағыттарында шекараны нығайтты, үш жүзді біріктіру саясатын жүргізді</span></li>
-      </ul>
-      <ol class="actions">
-        <li>Ноғай Ордасының құлдырауынан пайдаланып, батыс шекараны Жайыққа дейін жылжытты</li>
-        <li>Сібір хандығымен шекаралық қатынастарды реттеді</li>
-        <li>Сырдария өңіріндегі қалалар үшін Бұхарамен қақтығыстарда аумақты қорғады</li>
-      </ol>
-    </div>
-    <div class="map-card">
-      <svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg">
-        <rect width="800" height="560" fill="#f2e9d8"/>
-        <ellipse cx="90" cy="340" rx="50" ry="115" fill="#24506b" opacity="0.5"/>
-        <ellipse cx="235" cy="365" rx="32" ry="42" fill="#24506b" opacity="0.5"/>
-        <ellipse cx="560" cy="300" rx="95" ry="18" fill="#24506b" opacity="0.5" transform="rotate(-10 560 300)"/>
-        <path d="M150,110 C120,180 100,260 95,330" stroke="#24506b" stroke-width="3" fill="none" opacity="0.55"/>
-        <path d="M480,430 C400,410 300,390 235,365" stroke="#24506b" stroke-width="3" fill="none" opacity="0.55"/>
-        <path d="M660,60 C680,140 690,210 680,260" stroke="#24506b" stroke-width="3" fill="none" opacity="0.55"/>
-        <polygon points="150,300 230,180 420,150 620,230 640,380 520,440 340,430 200,400" fill="#a97b28" opacity="0.45" stroke="#a97b28" stroke-width="2"/>
-        <text x="90" y="472" font-size="12" fill="#4a463c" text-anchor="middle">Каспий т.</text>
-        <text x="235" y="422" font-size="12" fill="#4a463c" text-anchor="middle">Арал т.</text>
-        <text x="560" y="336" font-size="12" fill="#4a463c" text-anchor="middle">Балқаш к.</text>
-        <text x="100" y="150" font-size="13" fill="#645a48" font-family="Unbounded, sans-serif">НОҒАЙ (ыдырап жатқан)</text>
-        <text x="350" y="55" font-size="13" fill="#645a48" font-family="Unbounded, sans-serif">СІБІР ХАНДЫҒЫ</text>
-        <text x="300" y="490" font-size="13" fill="#645a48" font-family="Unbounded, sans-serif">БҰХАРА ӘМІРЛІГІ</text>
-      </svg>
-      <div class="legend">
-        <span><span class="swatch" style="background:#a97b28"></span>Хақназар тұсындағы аумақ</span>
-      </div>
-      <p class="map-cap">Схематикалық карта. Батыста Жайыққа дейін, солтүстікте Сібір хандығымен шекаралас аумаққа дейін кеңейген кезең.</p>
-    </div>
-  </div>
+<div class="wrap era-grid"><div>
+<span class="era-tag">ІІ КЕЗЕҢ</span>
+<h2>Хақназар хан: батыс бағыттағы ықпалды күшейту</h2>
+<div class="years">1538–1580 жж. · Хақназар хан</div>
+<p>Хақназар хан әлсіреген Ноғай Ордасының жағдайын пайдаланып, ноғай тайпаларының бір бөлігін қазақ хандығының саяси ықпалына қосты. Бұл батыстағы қазақ ықпалының күшеюіне әсер етті.</p>
+<p>Сонымен бірге Сырдария өңіріндегі қалалар үшін Орта Азия билеушілерімен күрес жүрді. Хақназардың саясаты хандықтың бірнеше бағытта қатар әрекет етуіне мүмкіндік берді.</p>
+<div class="how"><strong>ЖЕРДІ ҚАЛАЙ КЕҢЕЙТТІ?</strong><p>Негізгі тәсіл — көрші саяси бірлестіктер әлсіреген кезде олардың құрамындағы ру-тайпаларды өз билігіне тарту. Батыста Ноғай Ордасының ыдырауы қазақ хандығының ықпалын кеңейтуге қолайлы жағдай жасады.</p></div>
+<ul class="figures"><li><span class="name">Хақназар хан</span><span class="role">Хақназар Қасымнан кейiн құлдыраған
+Қазақ хандығын бiрiктiрiп қана қоймай, оның
+шегараларын кеңейте алды. Билiгiнiң соңына
+қарай хандықтың шегаралары батысында Жайық бойымен, солтүстiгiнде
+Есiл бойымен, шығысында Балқаштың арғы жағымен өттi. Оңтүстiгiнде
+қазақ иелiктерi Ташкентке жақындады.</span></li></ul>
+</div>
+<div class="media-card map">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Map%20of%20the%20Kazakh%20Khanate.png" alt="Қазақ хандығының картасы">
+<div class="media-cap">Қазақ хандығының XVI ғасырдағы аумағын түсіндіруге көмектесетін тарихи карта.</div>
+<div class="media-source">Сурет: Wikimedia Commons.</div>
+</div></div>
 </section>
 
 <!-- ERA 3 -->
 <section class="era" id="era3">
-  <div class="wrap era-grid">
-    <div>
-      <span class="era-tag">ІІІ КЕЗЕҢ</span>
-      <h2>Есім хан: Түркістанды қорғау және жоңғар қаупінің басталуы</h2>
-      <div class="years">1598–1628 жж. · Есім хан, Тұрсын хан</div>
-      <p>Есім хан билігі кезінде оңтүстіктегі Түркістан қаласы хандықтың астанасына айналды, бұл Сырдария бойындағы шекараны бекітудің маңызды қадамы болды. Дәл осы дәуірде шығыстан жаңа қауіп — Жоңғар хандығының күшеюі байқала бастады, бұл кейінгі ғасырда қазақ жерінің тағдырын түбегейлі өзгертетін ұзақ қақтығыстың бастауы еді.</p>
-      <p>Есім хан сондай-ақ Бұхара әмірлігімен шекаралық қақтығыстарда табысты әрекет етіп, оңтүстік өңірдегі қалаларды қорғап қалды.</p>
-      <ul class="figures">
-        <li><span class="name">Есім хан</span><span class="role">Түркістанды астана етіп бекітті, Бұхарамен шекара дауларында жеңіске жетті</span></li>
-      </ul>
-      <ol class="actions">
-        <li>Түркістан қаласы саяси-әскери тірекке айналдырылды</li>
-        <li>Оңтүстік шекара Бұхара әмірлігінен қорғалды</li>
-        <li>Шығыстан төнген жоңғар қаупіне қарсы алғашқы шаралар қабылдана бастады</li>
-      </ol>
-    </div>
-    <div class="map-card">
-      <svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg">
-        <rect width="800" height="560" fill="#f2e9d8"/>
-        <ellipse cx="90" cy="340" rx="50" ry="115" fill="#24506b" opacity="0.5"/>
-        <ellipse cx="235" cy="365" rx="32" ry="42" fill="#24506b" opacity="0.5"/>
-        <ellipse cx="560" cy="300" rx="95" ry="18" fill="#24506b" opacity="0.5" transform="rotate(-10 560 300)"/>
-        <path d="M480,430 C400,410 300,390 235,365" stroke="#24506b" stroke-width="3" fill="none" opacity="0.55"/>
-        <polygon points="150,300 230,180 420,150 620,230 640,380 520,440 340,430 200,400" fill="#a97b28" opacity="0.4" stroke="#a97b28" stroke-width="2"/>
-        <circle cx="330" cy="400" r="7" fill="#8a3a30"/>
-        <text x="330" y="418" font-size="13" fill="#8a3a30" font-family="Unbounded, sans-serif" text-anchor="middle">Түркістан</text>
-        <path d="M700,180 L640,240" stroke="#8a3a30" stroke-width="3" marker-end="url(#arrow1)"/>
-        <defs><marker id="arrow1" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8a3a30"/></marker></defs>
-        <text x="700" y="165" font-size="13" fill="#8a3a30" font-family="Unbounded, sans-serif" text-anchor="middle">ЖОҢҒАР ҚАУПІ</text>
-        <text x="90" y="472" font-size="12" fill="#4a463c" text-anchor="middle">Каспий т.</text>
-        <text x="235" y="422" font-size="12" fill="#4a463c" text-anchor="middle">Арал т.</text>
-        <text x="300" y="500" font-size="13" fill="#645a48" font-family="Unbounded, sans-serif">БҰХАРА ӘМІРЛІГІ</text>
-      </svg>
-      <div class="legend">
-        <span><span class="swatch" style="background:#a97b28"></span>Қазақ хандығының аумағы</span>
-        <span><span class="swatch" style="background:#8a3a30"></span>Жаңа қауіп бағыты</span>
-      </div>
-      <p class="map-cap">Схематикалық карта. Түркістан оңтүстік шекараның тірегіне айналды, ал шығыста жоңғар қаупі байқала бастады.</p>
-    </div>
-  </div>
+<div class="wrap era-grid"><div>
+<span class="era-tag">ІІІ КЕЗЕҢ</span>
+<h2>Есім хан: Түркістан және оңтүстік шекара</h2>
+<div class="years">1598–1628 жж. · Есім хан</div>
+<p>Есім хан кезінде Түркістан қазақ хандығының саяси орталығы ретінде орнықты. Сырдария бойындағы қалалар мен жолдарды бақылау мемлекеттің экономикалық және әскери тұрақтылығы үшін маңызды болды.</p>
+<p>Оңтүстікте Бұхара билеушілерімен, шығыста жаңа жоңғар қаупімен байланысты күрделі жағдай қалыптасты. Бұл кезеңде жаңа жер алудан гөрі бар аумақты ұстап тұру мен стратегиялық қалаларды қорғау маңызды болды.</p>
+<div class="how"><strong>ЖЕРДІ ҚАЛАЙ САҚТАДЫ?</strong><p>Стратегиялық қалаларды саяси орталыққа айналдыру, әскерді шоғырландыру және Сырдария бойындағы аймақтарды қорғау арқылы. Түркістанның маңызы оның саяси және діни орталық болуымен де артты.</p></div>
+<ul class="figures"><li><span class="name">Есім хан</span><span class="role">Түркістанды саяси тірек ретінде бекітіп, оңтүстік шекараны қорғады</span></li></ul>
+</div>
+<div class="media-card">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mausoleum%20of%20Esimhan.jpg" alt="Есім хан кесенесі" onerror="this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Esim%20Khan%20Mausoleum.jpg'">
+<div class="media-cap">Есім хан кесенесі — Түркістандағы XVII ғасырдың тарихи-сәулет ескерткіші.</div>
+<div class="media-source">Сурет: Wikimedia Commons / Түркістандағы тарихи нысан.</div>
+</div></div>
 </section>
 
 <!-- ERA 4 -->
 <section class="era" id="era4">
+<div class="wrap era-grid"><div>
+<span class="era-tag">IV КЕЗЕҢ</span>
+<h2>Тәуке хан: бірлік пен дипломатия арқылы жерді қорғау</h2>
+<div class="years">1680–1715 жж. · Тәуке хан, Төле би, Қазыбек би, Әйтеке би</div>
+<p>Тәуке хан тұсында «Жеті Жарғы» дәстүрлі құқықтық нормаларды жүйелеп, үш жүз арасындағы ішкі тәртіпті күшейтуге қызмет етті. Сыртқы қауіпке қарсы ортақ әрекет ету үшін саяси бірлік аса маңызды болды.</p>
+<p>Тәуке ханның кезеңінде шекараны тек соғыспен емес, дипломатиялық байланыстармен де ұстап тұруға тырысты. Көрші мемлекеттермен елшіліктер алмасу аумақтық тұрақтылыққа әсер етті.</p>
+<div class="how"><strong>ЖЕРДІ ҚАЛАЙ САҚТАДЫ?</strong><p>Ішкі бірлікті күшейту, үш жүздің ортақ мүддесін қалыптастыру және көрші мемлекеттермен дипломатиялық қатынас жүргізу арқылы. Яғни бұл кезеңде аумақты кеңейтуден гөрі оны жоғалтпау бірінші орында тұрды.</p></div>
+<ul class="figures">
+<li><span class="name">Тәуке хан</span><span class="role">«Жеті Жарғы» және сыртқы дипломатия арқылы мемлекетті нығайтты</span></li>
+<li><span class="name">Төле би</span><span class="role">Ұлы жүздің саяси бірлігіне ықпал етті</span></li>
+<li><span class="name">Қазыбек би</span><span class="role">Орта жүз атынан дипломатиялық қатынастарға қатысты</span></li>
+<li><span class="name">Әйтеке би</span><span class="role">Кіші жүздің ішкі бірлігі мен ортақ саясатқа ықпал етті</span></li>
+</ul>
+</div>
+<div class="media-card map">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kazakh%20Khanate%20under%20Tauke%20Khan%20%281680%E2%80%931718%29.png" alt="Тәуке хан тұсындағы Қазақ хандығы">
+<div class="media-cap">Тәуке хан дәуіріндегі Қазақ хандығының аумағын көрсететін карта.</div>
+<div class="media-source">Сурет: Wikimedia Commons, CC BY 4.0.</div>
+</div></div>
+</section>
+
+<!-- ERA 5 -->
+<section class="era" id="era5">
+<div class="wrap era-grid"><div>
+<span class="era-tag">V КЕЗЕҢ</span>
+<h2>Ақтабан шұбырынды: жерден айырылу қаупі</h2>
+<div class="years">1723–1727 жж. · Жоңғар шапқыншылығы</div>
+<p>1723 жылдан бастап жоңғарлардың жаппай шабуылы қазақтардың дәстүрлі қоныстарын тастап көшуіне әкелді. Бұл кезең қазақ жерін кеңейтудің емес, өмірлік маңызды аумақтарды сақтап қалудың күресі болды.</p>
+<p>Халықтың бір бөлігі батыс пен оңтүстікке қарай шегінді. Жайылымдардан, қалалардан және көш жолдарынан айырылу әлеуметтік-экономикалық жағдайды ауырлатты.</p>
+<div class="how"><strong>НЕГЕ ЖЕР АЗАЙДЫ?</strong><p>Жоңғар әскерінің әскери басымдығы мен ұйымдасқан шабуылдары салдарынан қазақ рулары уақытша қоныстарын тастап, шегінуге мәжбүр болды. Сондықтан бұл кезең кейінгі бірігуге және қарсы шабуылға түрткі болды.</p></div>
+</div>
+<div class="media-card map">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Map%20of%20the%20Dzungar%20Khanate%2C%20in%201717.png" alt="Жоңғар хандығының картасы">
+<div class="media-cap">XVIII ғасыр басындағы Жоңғар хандығының аумағын көрсететін карта.</div>
+<div class="media-source">Сурет: Wikimedia Commons.</div>
+</div></div>
+</section>
+
+<!-- ERA 6 -->
+<section class="era" id="era6">
+<div class="wrap era-grid"><div>
+<span class="era-tag">VI КЕЗЕҢ</span>
+<h2>Бірігу және жоңғарларға қарсы жеңіс</h2>
+<div class="years">1726–1730 жж. · Әбілқайыр хан, Бөгенбай батыр және басқа қолбасшылар</div>
+<p>Жоңғар қаупі қазақ жүздерінің әскери күштерін біріктіруге итермеледі. Бұланты-Білеуты және Аңырақай шайқастары қазақ жасақтарының қарсы шабуылға көшкенін көрсетті.</p>
+<p>Бұл жеңістер қазақтардың дәстүрлі қоныстарының бір бөлігін қайтаруға және жоңғарлардың батысқа қарай жылжуын тоқтатуға мүмкіндік берді. Алайда барлық жер бірден толық қалпына келген жоқ.</p>
+<div class="how"><strong>ЖЕРДІ ҚАЛАЙ ҚАЙТАРДЫ?</strong><p>Басты құрал — бірнеше жүздің жасақтарын біріктіру және қарсы шабуыл. Жеңістердің нәтижесінде қазақтардың бірқатар жайылымдық аумақтарды қайта иеленуіне жағдай туды.</p></div>
+<ul class="figures"><li><span class="name">Әбілқайыр хан</span><span class="role">Жоңғарларға қарсы қазақ жасақтарын ұйымдастыруға қатысқан Кіші жүз ханы</span></li><li><span class="name">Бөгенбай батыр</span><span class="role">Жоңғарларға қарсы соғыста аты шыққан қолбасшы</span></li></ul>
+</div>
+<div class="media-card map">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Map%20of%20the%20Kazakh%20Khanate%2018th%20century.png" alt="XVIII ғасырдағы Қазақ хандығы">
+<div class="media-cap">XVIII ғасырдағы Қазақ хандығының аумағын көрсететін карта.</div>
+<div class="media-source">Сурет: Wikimedia Commons, CC BY-SA 4.0.</div>
+</div></div>
+</section>
+
+<!-- ERA 7 -->
+<section class="era" id="era7">
+<div class="wrap era-grid"><div>
+<span class="era-tag">VII КЕЗЕҢ</span>
+<h2>Абылай хан: жоңғарлардан кейінгі жерлерді біріктіру</h2>
+<div class="years">1740–1781 жж. · Абылай хан</div>
+<p>Абылай хан жоңғар мемлекеті әлсіреп, кейін жойылғаннан кейінгі күрделі жағдайда қазақтардың дәстүрлі жерлерін сақтауға және ықпалын қалпына келтіруге ұмтылды.</p>
+<p>Ол Ресеймен де, Цин империясымен де дипломатиялық қатынас жүргізіп, екі ірі державаның арасында маневр жасауға тырысты. Бұл саясат қазақтардың дербестігін мүмкіндігінше сақтап қалуға бағытталды.</p>
+<div class="how"><strong>ЖЕРДІ ҚАЛАЙ БЕКІТТІ?</strong><p>Абылайдың басты әдісі — әскери күш пен дипломатияны қатар пайдалану. Жоңғарлардан кейін босап қалған немесе даулы болған жайылымдарға қазақ руларының қайта орналасуын қамтамасыз ету және сыртқы державалармен тепе-тең қатынас ұстау маңызды болды.</p></div>
+<ul class="figures"><li><span class="name">Абылай хан</span><span class="role">Әскери және дипломатиялық саясат арқылы қазақ жерінің тұтастығын сақтауға ұмтылды</span></li></ul>
+</div>
+<div class="media-card">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Abylai%20Khan%20monument%2C%20Almaty%20%28P1180153%29.jpg" alt="Абылай хан ескерткіші">
+<div class="media-cap">Абылай ханға арналған ескерткіш. Тарихи тұлғалардың қазіргі кездегі көркем бейнелері ретінде берілген.</div>
+<div class="media-source">Сурет: Matti Blume / Wikimedia Commons, CC BY-SA.</div>
+</div></div>
+</section>
+
+<!-- ERA 8 -->
+<section class="era" id="era8">
+<div class="wrap era-grid"><div>
+<span class="era-tag">VIII КЕЗЕҢ</span>
+<h2>1731–1824: Ресей ықпалының күшеюі және әкімшілік өзгерістер</h2>
+<div class="years">XVIII ғ. ортасы – XIX ғ. басы</div>
+<p>1731 жылы Әбілқайыр хан мен Кіші жүздің бірқатар старшындары Ресей империясына адалдық антын қабылдады. Бұл үдеріс бастапқыда әскери-саяси қауіптер жағдайындағы протекциялық қатынас ретінде қарастырылды, кейін Ресейдің даладағы әкімшілік және әскери ықпалы біртіндеп күшейді.</p>
+<p>1822 жылғы «Сібір қырғыздары туралы жарғы» Орта жүздегі хандық биліктің жойылуына және жаңа әкімшілік басқару жүйесінің енгізілуіне әкелді. Бекіністер салу мен қоныстандыру саясаты жерді пайдалану тәртібін өзгертті.</p>
+<p>1824 жылғы «Орынбор қырғыздары (қазақтары) жөніндегі Жарғы» және Кіші жүздегі хан билігінің жойылуы.Бұл реформа бойынша Кіші жүз аумағы Жайықтың сырт жағындағы үш округке бөлінді. Жүздегі өкімет билігі Орынбор губернаторына тікелей бағынатын үш басқарушы-султандардың қолына көшті.</p>
+<div class="how"><strong>ЖЕР ҚАЛАЙ ӨЗГЕРДІ?</strong><p>Бұл кезеңді «жаңа жерлерді қазақ хандары жаулап алды» деп түсіндіруге болмайды. Керісінше, Ресей империясы әкімшілік реформалар, әскери бекіністер, шекаралық желілер және қоныстандыру арқылы даладағы бақылауын біртіндеп кеңейтті.</p></div>
+</div>
+<div class="media-card map">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kasaccia%20Horda.jpg" alt="1780 жылғы картадағы Қазақ хандығы">
+<div class="media-cap">1780 жылғы картада көрсетілген «Қазақ ордасы». Түпнұсқа тарихи карта қоғамдық игілікте.</div>
+<div class="media-source">Сурет: Carington Bowles, 1780 / Wikimedia Commons, Public Domain.</div>
+</div></div>
+</section>
+
+<!-- ERA 9 -->
+<section class="era" id="era9">
+<div class="wrap era-grid"><div>
+<span class="era-tag">IX КЕЗЕҢ</span>
+<h2>Кенесары хан: бұрынғы аумақтық тұтастықты қалпына келтіру талпынысы</h2>
+<div class="years">1837–1847 жж. · Кенесары Қасымұлы</div>
+<p>Кенесары Қасымұлы бастаған қозғалыстың басты мақсаттарының бірі — Абылай хан дәуіріндегі қазақ жерлерінің аумақтық тұтастығын қалпына келтіру және Ресейдің жаңа бекіністері мен әкімшілік реформаларына қарсы тұру болды.</p>
+<p>Кенесары жасақтары 1838 жылы Ақмола бекінісіне шабуыл жасап, 1841 жылы хан сайланғаннан кейін оңтүстік бағытта Қоқан бекіністеріне қарсы әрекет етті. Оның әскери жорықтары кейбір аймақтарды уақытша өз бақылауына алуға мүмкіндік берді, бірақ қозғалыс 1847 жылы жеңіліспен аяқталды.</p>
+<div class="how"><strong>ЖЕРДІ ҚАЛАЙ ҚАЙТАРУҒА ТЫРЫСТЫ?</strong><p>Кенесары әскери жорық, бекіністерге шабуыл және дипломатиялық талаптарды қатар қолданды. Оның мақсаты — қазақ жерлерінің саяси тәуелсіздігін қалпына келтіру, Ресей бекіністерін жою және бұрынғы аумақтық тұтастықты қайта орнату еді.</p></div>
+<ul class="figures"><li><span class="name">Кенесары хан</span><span class="role">1837–1847 жылдардағы қозғалыстың жетекшісі, қазақ хандығының тәуелсіздігін қалпына келтіруге ұмтылды</span></li><li><span class="name">Наурызбай батыр</span><span class="role">Кенесары әскерінің көрнекті қолбасшысы</span></li></ul>
+</div>
+<div class="media-card">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kenesary%20monument%2C%20Astana.jpg" alt="Кенесары хан ескерткіші">
+<div class="media-cap">Кенесары хан ескерткіші. Кенесарының тарихи бейнесі қазіргі монументтік өнерде осылай көрсетіледі.</div>
+<div class="media-source">Сурет: Nikolamikovic82 / Wikimedia Commons, CC0.</div>
+</div></div>
+</section>
+
+
+<!-- ALASH -->
+<section class="era" id="alash">
   <div class="wrap era-grid">
     <div>
-      <span class="era-tag">IV КЕЗЕҢ</span>
-      <h2>Тәуке хан: үш жүзді біріктіру және дипломатия</h2>
-      <div class="years">1680–1715 жж. · Тәуке хан, Төле би, Қазыбек би, Әйтеке би</div>
-      <p>Тәуке хан тұсында қабылданған «Жеті Жарғы» заңдар жинағы үш жүздің де құқықтық-саяси бірлігін нығайтты. Бұл — сыртқы қауіп (әсіресе жоңғар шапқыншылығы) алдында ішкі бірлікті сақтаудың құралы болды. Тәуке хан Ресеймен және Қытаймен (Цин империясымен) дипломатиялық қатынас орнатып, шекара мәселелерін соғыссыз шешуге тырысты.</p>
-      <p>Осы кезеңде Төле би (Ұлы жүз), Қазыбек би (Орта жүз) және Әйтеке би (Кіші жүз) үш жүздің басын біріктіріп, ортақ сыртқы саясат жүргізуге ықпал етті — бұл шекараны қорғаудағы бірлескен әрекеттің саяси негізін қалады.</p>
+      <span class="era-tag">ХХ ҒАСЫР · АЛАШ</span>
+      <h2>Алаш зиялылары: қазақ жерінің аумақтық тұтастығын сақтау</h2>
+      <div class="years">1905–1920 жж. · Әлихан Бөкейхан, Ахмет Байтұрсынұлы, Міржақып Дулатұлы, Әлімхан Ермеков</div>
+
+      <p>ХХ ғасырдың басында жер мәселесі қазақ қоғамының ең өзекті саяси мәселесіне айналды. Алаш қозғалысының көшбасшылары патша үкіметінің қоныстандыру саясаты салдарынан қазақтардың жайылым, шабындық және қыстау жерлерінің тарылуына қарсы саяси және құқықтық жолмен күресті. Әлихан Бөкейхан қазақтың байырғы жерін қазақтар толық игермейінше, оны жеке меншікке немесе қоныс аударушыларға бермеу керек деп санады.</p>
+
+      <p>1905 жылғы Қарқаралы құзырхатында Әлихан Бөкейхан, Ахмет Байтұрсынұлы, Міржақып Дулатұлы және басқа зиялылар қоныс аудару саясаты мен жердің тарылуы мәселесін көтерді. «Қазақ» газеті сияқты баспасөз арқылы олар жер мәселесін халыққа түсіндіріп, ұлттық мүддені қорғауға шақырды.</p>
+
+      <p>1917 жылғы Екінші Жалпықазақ съезінде Алаш автономиясының аумақтық негізі ретінде Бөкей Ордасы, Орал, Торғай, Ақмола, Семей, Жетісу, Сырдария өңірлері және қазақтар қоныстанған бірқатар іргелес аумақтар қарастырылды. Бұл шешім қазақ жерін біртұтас ұлттық-аумақтық кеңістік ретінде сақтауға бағытталған саяси әрекет болды.</p>
+
+      <div class="before-after">
+        <h3>АЛАШ АВТОНОМИЯСЫНЫҢ АУМАҚТЫҚ КӨРІНІСІ</h3>
+        <div class="ba-grid">
+          <div class="ba-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/AlashAutonomyKK.png" alt="Алаш автономиясының жоспарланған аумақтары картасы">
+            <div class="ba-label">1917–1920</div>
+            <p class="ba-caption">Алаш автономиясы талап еткен аумақтардың шамамен көрсетілген картасы.</p>
+          </div>
+          <div class="ba-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Alash%20map1917-1920.png" alt="Алаш автономиясының картасы">
+            <div class="ba-label">1917–1920</div>
+            <p class="ba-caption">Алаш автономиясының аумақтық шекараларын көрсететін карта. Тарихи карталардағы шекаралар шартты екенін ескеру қажет.</p>
+          </div>
+        </div>
+      </div>
+
       <ul class="figures">
-        <li><span class="name">Тәуке хан</span><span class="role">«Жеті Жарғы» заңдары, Ресей мен Цинмен дипломатия</span></li>
-        <li><span class="name">Төле би</span><span class="role">Ұлы жүзді біріктіруші, сыртқы саясатта негізгі кеңесші</span></li>
-        <li><span class="name">Қазыбек би</span><span class="role">Орта жүзді біріктіруші, дипломатиялық миссиялар</span></li>
-        <li><span class="name">Әйтеке би</span><span class="role">Кіші жүзді біріктіруші, ішкі бірлікті нығайтушы</span>
+        <li><span class="name">Әлихан Бөкейхан</span><span class="role">Жерді ұлттық меншік ретінде қорғау идеясын ұсынды, автономия құру ісіне жетекшілік етті.</span></li>
+        <li><span class="name">Ахмет Байтұрсынұлы</span><span class="role">Жер мәселесін саяси мақалаларда көтеріп, қазақ жерін сақтауға бағытталған талаптарды қорғады.</span></li>
+        <li><span class="name">Міржақып Дулатұлы</span><span class="role">«Қазақ» газеті арқылы жер, автономия және ұлттық мемлекеттілік мәселелерін халыққа түсіндірді.</span></li>
+        <li><span class="name">Әлімхан Ермеков</span><span class="role">1920 жылы Мәскеуде Қазақстанның жері мен шекарасы туралы баяндама жасап, аумақтық тұтастықты қорғады.</span></li>
+      </ul>
+
+      <ol class="actions">
+        <li><strong>Саяси-құқықтық жол:</strong> жер мәселесін съездерде, баспасөзде және мемлекеттік органдар алдында көтерді.</li>
+        <li><strong>Ұлттық автономия:</strong> қазақтар мекендеген өңірлерді біртұтас аумақ ретінде қарастыруға ұмтылды.</li>
+        <li><strong>Шекараны дәлелдеу:</strong> Әлімхан Ермеков 1920 жылы Қазақстанның шекарасы жөнінде баяндама жасап, Семей, Ақмола және Каспий маңы сияқты маңызды аумақтардың Қазақстан құрамында болуын қорғады.</li>
+        <li><strong>Жерді қайтару:</strong> кейінгі жер органдары арқылы бұрын тартып алынған және пайдаланылмай жатқан бірқатар жерлерді қазақтарға қайтару мәселесі көтерілді.</li>
+      </ol>
+
+      <div class="map-card" style="margin-top:24px;position:static;">
+        <p class="map-cap" style="margin-top:0;">
+          <strong>Маңызды ескерту:</strong> Алаш зиялылары хандық дәуірдегідей әскери жорық арқылы жаңа жер жаулап алған жоқ. Олардың басты тәсілі — саяси ұйымдасу, құқықтық талап қою, баспасөз арқылы қоғамдық пікір қалыптастыру және автономияның аумақтық шекарасын мемлекеттік деңгейде дәлелдеу болды.
+        </p>
+      </div>
+    </div>
+    <div class="map-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Alash%20map1917-1920.png"
+           alt="Алаш автономиясының 1917–1920 жылдардағы картасы"
+           style="width:100%;height:auto;display:block;">
+      <div class="map-cap">Алаш автономиясының 1917–1920 жылдардағы аумақтық көрінісі. Карта Wikimedia Commons-та CC0 лицензиясымен жарияланған.</div>
+    </div>
+  </div>
+</section>
+
+
+<section class="conclusion" id="qorytyndy">
+<div class="wrap">
+  <span class="era-tag">ҚОРЫТЫНДЫ</span>
+  <h2>Қазақстан территориясы — ғасырлар бойы қалыптасқан тарихи кеңістік</h2>
+
+  <p style="max-width:82ch">
+    Қазақстанның қазіргі территориясы бір адамның немесе бір дәуірдің әрекетімен бірден пайда болған жоқ.
+    Оның тарихи негізі Қазақ хандығының құрылуынан басталып, Қасым хан, Хақназар хан, Есім хан,
+    Тәуке хан және Абылай хан дәуірлеріндегі саяси бірігу, дипломатия және әскери қорғаныс арқылы
+    қалыптасты. Жоңғар шапқыншылығы кезінде басты міндет жерді сақтап қалу болса, Кенесары хан
+    дәуірінде отарлық қысымға қарсы тұрып, қазақ жерінің дербестігін қалпына келтіру мақсаты алға шықты.
+  </p>
+
+  <p style="max-width:82ch">
+    ХХ ғасырдың басында күрестің сипаты өзгерді. Алаш зиялылары жерді әскери жолмен емес,
+    саяси, құқықтық және қоғамдық тәсілдермен қорғауға ұмтылды. Әлихан Бөкейхан жердің ұлттық
+    маңызын негіздеді, Ахмет Байтұрсынұлы мен Міржақып Дулатұлы жер мәселесін халыққа жеткізді,
+    ал Әлімхан Ермеков 1920 жылы Қазақстанның аумақтық тұтастығын мемлекеттік деңгейде қорғауға
+    қатысты. Осы әрекеттердің нәтижесінде қазақ жерінің бірқатар маңызды аумақтарын автономия
+    құрамында қалдыру мәселесі шешілді.
+  </p>
+
+  <div class="conclusion-grid">
+    <div class="summary-card">
+      <h3>1 · Құру</h3>
+      <p>Керей мен Жәнібек бастаған Қазақ хандығы қазақ мемлекеттігінің саяси-аумақтық негізін қалыптастырды.</p>
+    </div>
+    <div class="summary-card">
+      <h3>2 · Кеңейту</h3>
+      <p>Қасым мен Хақназар сияқты хандар саяси бірігу, қарсыластардың әлсіреуі және әскери-саяси әрекеттер арқылы хандықтың ықпалын кеңейтті.</p>
+    </div>
+    <div class="summary-card">
+      <h3>3 · Сақтау</h3>
+      <p>Тәуке, Абылай және қазақ батырлары сыртқы қауіпке қарсы бірлік, дипломатия және әскери қорғаныс арқылы жерді сақтауға күш салды.</p>
+    </div>
+    <div class="summary-card">
+      <h3>4 · Саяси қорғау</h3>
+      <p>Алаш зиялылары ұлттық автономия, жер құқығы және мемлекеттік шекара мәселесін саяси-құқықтық деңгейде қорғады.</p>
+    </div>
+  </div>
+
+  <div class="map-card" style="margin-top:30px;position:static;">
+    <p style="margin:0;max-width:85ch">
+      <strong>Негізгі ой:</strong> қазақ жерінің тарихын тек «жаңа жер алу» тарихы деп түсіндіру дұрыс емес.
+      Әр дәуірде міндет әртүрлі болды: бір кезде мемлекет құру, бір кезде аумақты кеңейту, бір кезде
+      басқыншылықтан қорғау, ал ХХ ғасырда ұлттық территорияның тұтастығын саяси және құқықтық жолмен
+      сақтау. Қазақстан территориясының қалыптасуы — осы үдерістердің ұзақ тарихи нәтижесі.
+    </p>
+  </div>
+
+  <a class="back-top" href="#top">↑ Жоғарыға</a>
+</div>
+</section>
+
+
+</main>
+
+<footer>
+<div class="wrap">
+<h3>Суреттер туралы</h3>
+<p>Сайттағы жаңа визуалдар негізінен Wikimedia Commons-тағы ашық лицензиялы немесе қоғамдық игіліктегі материалдарға негізделген. Кейбір тарихи тұлғалардың қазіргі портреттері дәлме-дәл прижизненный портрет емес, сондықтан мәтінде олар көркем/заманауи бейне ретінде көрсетілді.</p>
+<ol>
+<li>Қасым хан дәуірінің картасы — Wikimedia Commons, CC BY-SA.</li>
+<li>Тәуке хан дәуірінің картасы — Wikimedia Commons, CC BY.</li>
+<li>1780 жылғы «Қазақ ордасы» картасы — Public Domain.</li>
+<li>Абылай хан ескерткіші — Matti Blume, CC BY-SA.</li>
+<li>Кенесары хан ескерткіші — Nikolamikovic82, CC0.</li>
+<li>Алаш автономиясының карталары — Wikimedia Commons: AlashAutonomyKK.png және Alash map1917-1920.png.</li>
+<li>Бүйірдегі ою — Wikimedia Commons, “Ornament in Kazakhstanian flag.JPG”, CC BY-SA 3.0.</li>
+</ol>
+<p class="note">Тарихи шекаралар шартты болуы мүмкін. Сайт оқу жобасына арналған; карталарды қазіргі мемлекеттік шекаралармен теңестіруге болмайды.</p>
+</div>
+</footer>
+
+</body>
+</html>
